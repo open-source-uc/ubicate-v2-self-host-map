@@ -1,0 +1,15 @@
+{
+  "directory": "extracts/",
+  "extracts": [
+    {
+      "name": "santiago",
+      "output": "santiago.osm.pbf",
+      "bbox": [-70.85, -33.70, -70.45, -33.30]
+    },
+    {
+      "name": "villarrica",
+      "output": "villarrica.osm.pbf",
+      "bbox": [-72.29, -39.35, -72.14, -39.24]
+    }
+  ]
+}
