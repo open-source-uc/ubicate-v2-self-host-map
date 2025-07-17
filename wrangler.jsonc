@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "ubicate-v2-self-host-map",
+	"name": "self-hosted-map",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-07-15",
 	"observability": {
