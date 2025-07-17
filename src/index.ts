@@ -17,7 +17,8 @@ export default {
 				return true;
 			}
 			const osucDevRegex = /^https:\/\/([a-z0-9-]+\.)?osuc\.dev$/;
-			return osucDevRegex.test(origin);
+			const pagesDevRegex = /^https:\/\/([a-z0-9-]+\.)?pages\.dev$/;
+			return osucDevRegex.test(origin) || pagesDevRegex.test(origin);
 		}
 
 		const key = `ubicate-tiles${path}`;
