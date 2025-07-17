@@ -15,9 +15,9 @@ export default {
 				origin === "http://127.0.0.1:8080"
 			) return true;
 
-			// Dominios permitidos
-			const osucDevRegex = /^https:\/\/([a-z0-9-]+\.)?osuc\.dev$/;
-			const pagesDevRegex = /^https:\/\/([a-z0-9-]+\.)?pages\.dev$/;
+			// Dominios permitidos - incluye guión bajo (_)
+			const osucDevRegex = /^https:\/\/([a-z0-9_-]+\.)*osuc\.dev$/;
+			const pagesDevRegex = /^https:\/\/([a-z0-9_-]+\.)*pages\.dev$/;
 			return osucDevRegex.test(origin) || pagesDevRegex.test(origin);
 		}
 
@@ -59,7 +59,7 @@ export default {
 			if (!obj) {
 				const headers = new Headers();
 				if (isAllowedOrigin(origin)) {
-					headers.set("Access-Control-Allow-Origin", origin ? "");
+					headers.set("Access-Control-Allow-Origin", origin ?? "");
 				}
 				return new Response("Tile not found", { status: 404, headers });
 			}
